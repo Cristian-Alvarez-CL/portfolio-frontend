@@ -1,4 +1,4 @@
 export const images = {
-  profile: "./globe.svg",
+  profile: "./foto_perfil.webp",
   // Puedes agregar más imágenes aquí
 }
