@@ -1,31 +1,31 @@
 export const content = {
   meta: {
-    title: "DevPortfolio",
-    copyright: "© 2024 Tu Nombre. Todos los derechos reservados.",
+    title: "Portfolio Cristian Dev",
+    copyright: "© 2025 Cristian Dev. Todos los derechos reservados.",
   },
   hero: {
     title: "Desarrollador Backend",
     subtitle:
       "Especializado en crear APIs robustas, escalables y seguras. Transformo ideas complejas en soluciones backend eficientes.",
     badges: [
-      { icon: "MapPin", text: "Ciudad, País" },
+      { icon: "MapPin", text: "Santiago, Chile" },
       { icon: "Calendar", text: "5+ años de experiencia" },
       { icon: "Users", text: "Disponible para proyectos" },
     ],
     buttons: [
-      { text: "Descargar CV", icon: "Download", variant: "primary" },
-      { text: "Contactar", icon: "Mail", variant: "outline" },
+      { text: "Descargar CV", icon: "Download", variant: "primary", href: "./docs/CV-Cristian_Alvarez.pdf", download: true },
+      { text: "Contactar", icon: "Mail", variant: "outline", href: "mailto:cristian.alvarez.pnc@gmail.com" },
     ],
   },
   about: {
     title: "Sobre mí",
     paragraphs: [
-      "Soy un desarrollador backend apasionado por crear soluciones tecnológicas que resuelvan problemas reales. Con más de 5 años de experiencia, me especializo en el desarrollo de APIs REST, arquitecturas de microservicios y sistemas distribuidos.",
+      "Soy un desarrollador backend apasionado por crear soluciones tecnológicas que resuelvan problemas reales. Con más de 5 años de experiencia en TI, me especializo en el desarrollo de APIs REST, arquitecturas de microservicios y sistemas distribuidos.",
       "Mi enfoque se centra en escribir código limpio, mantenible y escalable, siempre siguiendo las mejores prácticas de la industria y los principios SOLID.",
     ],
     socialLinks: [
-      { name: "GitHub", icon: "Github" },
-      { name: "LinkedIn", icon: "Linkedin" },
+      { name: "GitHub", icon: "Github", href: "https://github.com/Cristian-Alvarez-CL/" },
+      { name: "LinkedIn", icon: "Linkedin", href: "https://www.linkedin.com/in/cristian-alvarez-ponce/" },
     ],
     cards: [
       { title: "Performance", description: "Optimización de consultas y rendimiento", icon: "Zap", color: "blue" },
@@ -82,9 +82,9 @@ export const content = {
     description:
       "Estoy disponible para nuevos proyectos y oportunidades. ¡Hablemos sobre cómo puedo ayudarte a construir tu próxima solución backend!",
     buttons: [
-      { text: "tu.email@ejemplo.com", icon: "Mail", variant: "primary" },
-      { text: "GitHub", icon: "Github", variant: "outline" },
-      { text: "LinkedIn", icon: "Linkedin", variant: "outline" },
+      { text: "cristian.alvarez.pnc@gmail.com", icon: "Mail", variant: "primary", href: "mailto:cristian.alvarez.pnc@gmail.com" },
+      { text: "GitHub", icon: "Github", variant: "outline" , href: "https://github.com/Cristian-Alvarez-CL/"},
+      { text: "LinkedIn", icon: "Linkedin", variant: "outline", href: "https://www.linkedin.com/in/cristian-alvarez-ponce/"},
     ],
   },
   navigation: [

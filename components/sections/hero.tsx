@@ -23,7 +23,7 @@ export function Hero() {
             alt="Profile"
             className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg object-cover"
           />
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">{content.hero.title}</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">{'</>'} {content.hero.title} {'</>'}</h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{content.hero.subtitle}</p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {content.hero.badges.map((badge, index) => {
@@ -43,11 +43,21 @@ export function Hero() {
                 <Button
                   key={index + button.text}
                   size="lg"
-                  className={button.variant === "primary" ? "bg-blue-600 hover:bg-blue-700" : ""}
+                  asChild
+                  className={button.variant === "primary"
+                    ? "bg-green-400 hover:bg-green-500/50 flex items-center gap-2 px-6 py-3 text-base"
+                    : "flex items-center gap-2 px-6 py-3 text-base"}
                   variant={button.variant === "primary" ? "default" : "outline"}
                 >
-                  <Icon className="w-4 h-4 mr-2" />
-                  {button.text}
+                  <a
+                    href={button.href}
+                    {...(button.download ? { download: true } : {})}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon className="w-5 h-5" aria-hidden="true" />
+                    <span className="font-medium">{button.text}</span>
+                  </a>
                 </Button>
               )
             })}

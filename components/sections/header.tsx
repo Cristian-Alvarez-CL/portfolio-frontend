@@ -9,6 +9,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Code2 className="h-8 w-8 text-blue-600" />
           <span className="text-xl font-bold text-gray-900">{content.meta.title}</span>
+          <Code2 className="h-8 w-8 text-blue-600" />
         </div>
         <nav className="hidden md:flex gap-6">
           {content.navigation.map((item, index) => (

@@ -35,15 +35,35 @@ export function About() {
             </p>
           ))}
           <div className="flex gap-4">
-            {content.about.socialLinks.map((link, index) => {
-              const Icon = iconMap[link.icon as keyof typeof iconMap]
+            {content.about.socialLinks.map((link) => {
+              const icon = iconMap[link.icon as keyof typeof iconMap]
+              const IconComponent = icon
+
               return (
-                <Button key={index + link.name} variant="outline" size="sm">
-                  <Icon className="w-4 h-4 mr-2" />
-                  {link.name}
+                <Button
+                  key={link.name}
+                  variant="outline"
+                  size="sm"
+                  className="px-8 py-6 text-base flex items-center gap-2 whitespace-nowrap"
+                  asChild
+                >
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    {typeof IconComponent === "string" ? (
+                      <img
+                        src={IconComponent}
+                        alt={link.name}
+                        className="w-5 h-5"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <IconComponent className="w-5 h-5" aria-hidden="true" />
+                    )}
+                    <span className="font-medium">{link.name}</span>
+                  </a>
                 </Button>
               )
             })}
+
           </div>
         </div>
         <div className="grid grid-cols-2 gap-6">

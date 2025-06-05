@@ -1,6 +1,6 @@
 export const images = {
-  profile: './foto_perfil.webp',
-  linkdin: './linkedin.svg',
-  github: './github.svg',
+  profile: './images/foto_perfil.webp',
+  linkdin: './images/linkedin.svg',
+  github: './images/github.svg',
   // Puedes agregar más imágenes aquí
 }
