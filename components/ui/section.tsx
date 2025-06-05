@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils"
 import type React from "react"
 
 interface SectionProps extends React.HTMLAttributes<HTMLElement> {
-  id?: string
-  variant?: "default" | "white"
-  container?: boolean
-  children: React.ReactNode
+  readonly id?: string
+  readonly variant?: "default" | "white"
+  readonly container?: boolean
+  readonly children: React.ReactNode
 }
 
 export function Section({ id, className, variant = "default", container = true, children, ...props }: SectionProps) {
@@ -25,8 +25,8 @@ export function Section({ id, className, variant = "default", container = true, 
 }
 
 interface SectionHeaderProps {
-  title: string
-  className?: string
+  readonly title: string
+  readonly className?: string
 }
 
 export function SectionHeader({ title, className }: SectionHeaderProps) {

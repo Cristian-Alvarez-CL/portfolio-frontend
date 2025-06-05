@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Experience } from "@/utils/types"
 
 interface ExperienceCardProps {
-  experience: Experience
+  readonly experience: Experience
 }
 
 export function ExperienceCard({ experience }: ExperienceCardProps) {
@@ -24,7 +24,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           <h4 className="font-semibold mb-2">Logros principales:</h4>
           <ul className="space-y-2">
             {experience.achievements.map((achievement, idx) => (
-              <li key={idx} className="flex items-start gap-2 text-gray-600">
+              <li key={idx + achievement} className="flex items-start gap-2 text-gray-600">
                 <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
                 {achievement}
               </li>

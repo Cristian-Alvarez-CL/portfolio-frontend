@@ -9,7 +9,7 @@ export function Projects() {
       <SectionHeader title={content.projects.title} />
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <ProjectCard key={index + project.title} project={project} />
         ))}
       </div>
     </Section>

@@ -12,7 +12,7 @@ export function Header() {
         </div>
         <nav className="hidden md:flex gap-6">
           {content.navigation.map((item, index) => (
-            <Link key={index} href={item.href} className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link key={index + item.text} href={item.href} className="text-gray-600 hover:text-blue-600 transition-colors">
               {item.text}
             </Link>
           ))}

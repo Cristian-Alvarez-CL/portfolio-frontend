@@ -29,7 +29,7 @@ export function Hero() {
             {content.hero.badges.map((badge, index) => {
               const Icon = iconMap[badge.icon as keyof typeof iconMap]
               return (
-                <Badge key={index} variant="secondary" className="px-4 py-2">
+                <Badge key={index + badge.text} variant="secondary" className="px-4 py-2">
                   <Icon className="w-4 h-4 mr-2" />
                   {badge.text}
                 </Badge>
@@ -41,7 +41,7 @@ export function Hero() {
               const Icon = iconMap[button.icon as keyof typeof iconMap]
               return (
                 <Button
-                  key={index}
+                  key={index + button.text}
                   size="lg"
                   className={button.variant === "primary" ? "bg-blue-600 hover:bg-blue-700" : ""}
                   variant={button.variant === "primary" ? "default" : "outline"}

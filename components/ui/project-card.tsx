@@ -2,10 +2,11 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Project } from "@/utils/types"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink } from "lucide-react"
+import { images } from "@/data/images"
 
 interface ProjectCardProps {
-  project: Project
+  readonly project: Project
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
@@ -30,7 +31,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <h4 className="font-semibold mb-2">Características:</h4>
           <ul className="text-sm text-gray-600 space-y-1">
             {project.features.map((feature, idx) => (
-              <li key={idx} className="flex items-start gap-2">
+              <li key={idx + feature} className="flex items-start gap-2">
                 <span className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
                 {feature}
               </li>
@@ -41,9 +42,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="p-6 pt-0">
         <div className="flex gap-2">
           <Button variant="outline" size="sm" className="flex-1" asChild>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">
-              <Github className="w-4 h-4 mr-2" />
-              Código
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <img src={images.github} alt="GitHub" className="w-4 h-4 mr-2" />
+              <span>Código</span>
             </a>
           </Button>
           <Button variant="outline" size="sm" className="flex-1" asChild>

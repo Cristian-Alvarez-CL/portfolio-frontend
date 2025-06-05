@@ -27,7 +27,7 @@ export function Skills() {
         {content.skills.categories.map((category, index) => {
           const Icon = iconMap[category.icon as keyof typeof iconMap]
           return (
-            <Card key={index}>
+            <Card key={index + category.title} className="bg-white shadow-sm hover:shadow-md transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Icon className={`w-5 h-5 ${colorMap[category.color as keyof typeof colorMap]}`} />
