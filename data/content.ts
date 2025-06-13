@@ -4,12 +4,12 @@ export const content = {
     copyright: "© 2025 Cristian Dev. Todos los derechos reservados.",
   },
   hero: {
-    title: "Desarrollador Backend",
+    title: "Desarrollador Backend y QA Engineer",
     subtitle:
       "Especializado en crear APIs robustas, escalables y seguras. Transformo ideas complejas en soluciones backend eficientes.",
     badges: [
       { icon: "MapPin", text: "Santiago, Chile" },
-      { icon: "Calendar", text: "5+ años de experiencia" },
+      { icon: "Calendar", text: "5+ años de experiencia en distintos roles" },
       { icon: "Users", text: "Disponible para proyectos" },
     ],
     buttons: [
