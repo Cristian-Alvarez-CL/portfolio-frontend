@@ -3,6 +3,7 @@ import { FeatureCard } from "@/components/ui/feature-card"
 import { Section, SectionHeader } from "@/components/ui/section"
 import { content } from "@/data/content"
 import { Cloud, Server, Shield, Zap } from "lucide-react"
+import Image from "next/image"
 import { images } from "@/data/images"
 
 // Mapping de nombres de iconos a componentes
@@ -49,7 +50,9 @@ export function About() {
                 >
                   <a href={link.href} target="_blank" rel="noopener noreferrer">
                     {typeof IconComponent === "string" ? (
-                      <img
+                      <Image
+                        width={20}
+                        height={20}
                         src={IconComponent}
                         alt={link.name}
                         className="w-5 h-5"

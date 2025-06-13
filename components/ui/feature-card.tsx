@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 import type { LucideIcon } from "lucide-react"
+import Image from "next/image"
 
 type IconType = LucideIcon | string
 
@@ -25,7 +26,7 @@ export function FeatureCard({
     <Card className={className}>
       <CardContent className="p-6 text-center">
         {isImage ? (
-          <img
+          <Image
             src={icon}
             alt=""
             className="w-8 h-8 mx-auto mb-2"

@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Project } from "@/utils/types"
 import { ExternalLink } from "lucide-react"
 import { images } from "@/data/images"
+import Image from "next/image"
 
 interface ProjectCardProps {
   readonly project: Project
@@ -43,7 +44,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex gap-2">
           <Button variant="outline" size="sm" className="flex-1" asChild>
             <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center">
-              <img src={images.github} alt="GitHub" className="w-4 h-4 mr-2" />
+              <Image width={20}
+                height={20} 
+                src={images.github} 
+                alt="GitHub" 
+                className="w-4 h-4 mr-2"
+              />
               <span>Código</span>
             </a>
           </Button>

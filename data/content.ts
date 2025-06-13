@@ -82,7 +82,7 @@ export const content = {
     description:
       "Estoy disponible para nuevos proyectos y oportunidades. ¡Hablemos sobre cómo puedo ayudarte a construir tu próxima solución backend!",
     buttons: [
-      { text: "cristian.alvarez.pnc@gmail.com", icon: "Mail", variant: "primary", href: "mailto:cristian.alvarez.pnc@gmail.com" },
+      { text: "Contactar", icon: "Mail", variant: "primary", href: "mailto:cristian.alvarez.pnc@gmail.com" },
       { text: "GitHub", icon: "Github", variant: "outline" , href: "https://github.com/Cristian-Alvarez-CL/"},
       { text: "LinkedIn", icon: "Linkedin", variant: "outline", href: "https://www.linkedin.com/in/cristian-alvarez-ponce/"},
     ],

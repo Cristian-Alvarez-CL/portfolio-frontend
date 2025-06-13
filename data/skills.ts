@@ -7,7 +7,6 @@ export const skills: Skill[] = [
   { name: "Javascript", category: "Language" },
   { name: "Express.js", category: "Framework" },
   { name: "Flask", category: "Framework" },
-  { name: "Spring Boot", category: "Framework" },
   { name: "TypeORM", category: "Framework" },
   { name: "PostgreSQL", category: "Database" },
   { name: "SQL Server", category: "Database" },
@@ -18,7 +17,6 @@ export const skills: Skill[] = [
   { name: "Docker", category: "DevOps" },
   { name: "AWS", category: "Cloud" },
   { name: "GCP", category: "Cloud" },
-  { name: "GraphQL", category: "API" },
   { name: "REST APIs", category: "API" },
   { name: "Microservices", category: "Architecture" },
 ]

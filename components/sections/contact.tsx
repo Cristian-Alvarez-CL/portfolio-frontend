@@ -3,6 +3,7 @@ import { Section, SectionHeader } from "@/components/ui/section"
 import { content } from "@/data/content"
 import { Mail } from "lucide-react"
 import { images } from "@/data/images"
+import Image from "next/image"
 
 // Mapping de nombres de iconos a componentes
 const iconMap = {
@@ -23,7 +24,7 @@ export function Contact() {
             const IconComponent = icon
             return (
               <Button
-                key={button.text}
+                key={index + button.text}
                 size="lg"
                 asChild
                 className={button.variant === "primary"
@@ -33,7 +34,8 @@ export function Contact() {
               >
                 <a href={button.href} target="_blank" rel="noopener noreferrer">
                   {typeof IconComponent === "string" ? (
-                    <img
+                    <Image width={20}
+                      height={20}
                       src={IconComponent}
                       alt={`Icon for ${button.text}`}
                       className="w-5 h-5"
